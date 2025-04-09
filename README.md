@@ -1,1 +1,1 @@
-integrantes:
+Integrantes:
