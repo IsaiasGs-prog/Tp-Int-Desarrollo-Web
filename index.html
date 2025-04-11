@@ -88,6 +88,24 @@
             <p>Realiza tu reserva</p>
             <p>-----------------------------------</p>
             <p>Para realizar una reserva, por favor completa el siguiente formulario:</p>
+            <form action="reservas.php" method="post">
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br>
+                <label for="fecha">Fecha del evento:</label><br>
+                <input type="date" id="fecha" name="fecha" required><br><br>
+                <label for="salon">Selecciona el salón:</label><br>
+                <select id="salon" name="salon">
+                    <option value="salon1">Salon N°1</option>
+                    <option value="salon2">Salon N°2</option>
+                    <option value="salon3">Salon N°3</option>
+                    <option value="salon4">Salon N°4</option>
+                    <option value="salon5">Salon N°5</option>
+                </select><br><br>
+                <input type="submit" value="Reservar">
         </section>
         <section>
             <h3><b>Eventos</b></h3>
