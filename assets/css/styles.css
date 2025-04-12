@@ -122,10 +122,17 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: left;
     margin-top: 30px;
     position: relative; /* Asegura que el pie de página esté al final del contenido */
 }
+footer h5 {
+    text-align: left;
+}
 footer p {
-    font-size: 0.9rem;
+    text-align: center;
+    font-size: 15px;
+}
+footer a{
+    font-size: 15px;
+    text-align: left;
 }
