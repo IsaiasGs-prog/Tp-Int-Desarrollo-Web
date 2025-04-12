@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio de Tp IDW S.A</title>
+    <title>IDW S.A</title>
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
 </head>
 <body>
@@ -11,143 +11,61 @@
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
+                <!--<li><a href="salones.html">Salones</a></li>-->
                 <li><a href="institucional.html">Informacion institucional</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <h1>Bienvenidos a IDW S.A!</h1>
-        <h2>Reserva de Salones de Eventos</h2>
-        <p>En IDW S.A. hacemos realidad los momentos que soñás. Somos una empresa especializada en la organización integral de eventos sociales, corporativos y culturales, con una propuesta que combina elegancia, creatividad y profesionalismo.</p>
-        <p>Contamos con salones modernos, versátiles y totalmente equipados para adaptarse a cada tipo de evento: bodas, cumpleaños, fiestas de 15, conferencias, lanzamientos y más. Nuestro equipo se encarga de cada detalle, desde la ambientación y la gastronomía hasta la coordinación técnica y logística, para que vos solo te ocupes de disfrutar.</p>
+        <h1>BIENVENIDOS A IDW S.A.</h1>
+        <h2>ALQUILER DE EVENTOS INFANTILES</h2>
+        <p>En IDW S.A. hacemos realidad los momentos que soñás. Somos una empresa especializada en la organización integral de eventos infantiles. 
+            Contamos con salones modernos, versátiles y totalmente equipados para adaptarse a todos los gustos.</p>
+        <p>Tu mejor opción para la organización de cumpleaños infantiles. Descubre nuestros salones y servicios para crear un evento inolvidable.</p>
     </header>
     <main>
-        <section>
-            <h3><b>Nuestro Catalogo</b></h3>
+        <section class="container">
+            <h1 id="inicio">Nuestro Catalogo</h1>
             <p>Encuentra el salón perfecto para tu evento especial!!.</p>
-            <ol>
-                <li>
-                    <strong>Salon N°1</strong> La Paz 4560
-                    
-                    <br>
-                        <img src="img/salones/catalogo1.jpg" alt="Catalogo 1" width="200" height="200"></i>
-                        <br>
-                        <p>Descripcion: Salon de fiestas con capacidad para 100 personas, ideal para casamientos y eventos familiares.</p><br/>
-                        <p>Precio: $100.000</p><br/>
-                        <p>Capacidad: 100 personas</p><br/>
-                        <p>Servicios: Buffet, Decoracion, Sonido.</p><br/>
-                        <br>
-                </li>
-                <li>
-                    <strong>Salon N°2</strong> Avellaneda 1234
-                        <br>
-                            <img src="img/salones/catalogo2.jpg" alt="Catalogo 2" width="200" height="200"></i>
-                            <br>
-                            <p>Descripcion: Salon de fiestas con capacidad para 100 personas, ideal para eventos familiares.</p><br>
-                            <p>Precio: $200.000</p><br/>
-                            <p>Capacidad: 200 personas</p><br/>
-                            <p>Servicios: Buffet, Decoracion, Sonido.</p><br/>
-                </li>
-                <li>
-                    <strong>Salon N°3</strong> San Martin 4560
-                        <br>
-                            <img src="img/salones/catalogo3.jpg" alt="Catalogo 2" width="200" height="200"></i>
-                            <br>
-                            <p>Descripcion: Salon de fiestas con capacidad para 300 personas, ideal para casamientos y eventos familiares.</p><br>
-                            <p>Precio: $300.000</p><br/>
-                            <p>Capacidad: 300 personas</p><br/>
-                            <p>Servicios: Buffet, Decoracion, Sonido.</p><br/>
-                </li>
-                <li>
-                    <strong>Salon N°3</strong> laplata 1234
-                        <br>
-                            <img src="img/salones/catalogo4.jpg" alt="Catalogo 2" width="200" height="200"></i>
-                            <br>
-                            <p>Descripcion: Salon de fiestas con capacidad para 300 personas, ideal para casamientos y eventos familiares.</p><br>
-                            <p>Precio: $400.000</p><br/>
-                            <p>Capacidad: 300 personas</p><br/>
-                            <p>Servicios: Buffet, Decoracion, Sonido.</p><br/>
-                </li>
-                <li>
-                    <strong>Salon N°3</strong> san juan 1234
-                        <br>
-                            <img src="img/salones/catalogo5.jpg" alt="Catalogo 2" width="200" height="200"></i>
-                            <br>
-                            <p>Descripcion: Salon de fiestas con capacidad para 400 personas, ideal para casamientos y eventos familiares.</p><br>
-                            <p>Precio: $500.000</p><br/>
-                            <p>Capacidad: 400 personas</p><br/>
-                            <p>Servicios: Buffet, Decoracion, Sonido.</p><br/>
-                </li>
-            </ol>
-        </section>
-        <section>
-            <h3><b>Reservas</b></h3>
-            <p>Realiza tu reserva</p>
-            <p>-----------------------------------</p>
-            <p>Para realizar una reserva, por favor completa el siguiente formulario:</p>
-            <form action="reservas.php" method="post">
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-                <label for="telefono">Teléfono:</label><br>
-                <input type="tel" id="telefono" name="telefono" required><br><br>
-                <label for="fecha">Fecha del evento:</label><br>
-                <input type="date" id="fecha" name="fecha" required><br><br>
-                <label for="salon">Selecciona el salón:</label><br>
-                <select id="salon" name="salon">
-                    <option value="salon1">Salon N°1</option>
-                    <option value="salon2">Salon N°2</option>
-                    <option value="salon3">Salon N°3</option>
-                    <option value="salon4">Salon N°4</option>
-                    <option value="salon5">Salon N°5</option>
-                </select><br><br>
-                <input type="submit" value="Reservar">
-        </section>
-        <section>
-            <h3><b>Eventos</b></h3>
-            <p>Consulta los eventos</p>
-            <p>-----------------------------------</p>
-            <strong>Casamiento</strong>
-                        <br>
-                            <img src="img/eventos/evento2.jpg" alt="Catalogo 2" width="200" height="200"></i>
-                            <br>
-                            <p>Descripcion: Salon de fiestas ideal para casamientos y eventos familiares.</p><br>
-            <strong>cumpleaños</strong>
-                        <br>
-                            <img src="img/eventos/evento3.jpg" alt="Catalogo 2" width="200" height="200"></i>
-                            <br>
-                            <p>Descripcion: Salon de fiestas ideal para eventos familiares.</p><br>
-            <strong>Fiesta de 15 Años</strong>
-                        <br>
-                            <img src="img/eventos/evento1.jpg" alt="Catalogo 2" width="200" height="200"></i>
-                            <br>
-                            <p>Descripcion: Salon de fiestas ideal eventos familiares.</p><br>
+            <div id="salones" class="gallery">
+                <div class="card">
+                    <img src="img/salones/catalogo1.jpg" alt="Salón Elegancia">
+                    <h3>Salón Elegancia</h3>
+                </div>
+                <div class="card">
+                    <img src="img/salones/catalogo2.jpg" alt="Salón Jardín Encantado">
+                    <h3>Salón Jardín Encantado</h3>
+                </div>
+                <div class="card">
+                    <img src="img/salones/catalogo3.jpg" alt="Salón Moderno">
+                    <h3>Salón Moderno</h3>  
+                </div>
+                    <div class="card">
+                        <img src="img/salones/catalogo4.jpg" alt="Salón Rústico">
+                        <h3>Salón Rústico</h3>
+                        
+                    </div>
+                    <div class="card">
+                        <img src="img/salones/catalogo5.jpg" alt="Salón de Fiesta Infantil">
+                        <h3>Salón de Fiesta Infantil</h3>
+                        
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+   
     <footer>
         <p>Derechos reservados &copy; IDW S.A 2025</p>
         <h2><b>Mas Informacion</b></h2>
-        <p>-----------------------------------</p>
         <p><b>Nuestro Facebook</b></p>
-        <p>-----------------</p>
         <p><a href="https://www.facebook.com/" target="_blank">Facebook</a></p>
-        <p>-----------------</p>
         <p><b>Nuestro Instragram</b></p>
-        <p>-----------------</p>
         <p><a href="https://www.instagram.com/" target="_blank">Instagram</a></p>
-        <p>-----------------------------------</p>
         <p><b>Nuestro Twitter</b></p>
-        <p>-----------------</p>
         <p><a href="https://www.twitter.com/" target="_blank">Twitter</a></p>
-        <p>-----------------------------------</p>
-        <p><b>Nuestro Youtube</b></p>
-        <p>-----------------</p>
-        <p><a href="https://www.youtube.com/" target="_blank">YouTube</a></p>
-        <p>-----------------------------------</p>
+        <p><a href="https://www.youtube.com/" target="_blank"><b>Nuestro Youtube</b></a></p>
         <p><b>Nuestro Tiktok</b></p>
-        <p>-----------------</p>
         <p><a href="https://www.tiktok.com/" target="_blank">TikTok</a></p>
-        <p>-----------------------------------</p>
     </footer>      
 </body>
 </html>
