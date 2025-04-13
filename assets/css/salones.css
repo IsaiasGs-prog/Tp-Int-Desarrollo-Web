@@ -79,7 +79,7 @@ h1 {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
+    text-align: left;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
 }
 .card:hover {
@@ -118,6 +118,12 @@ h1 {
     margin-bottom: 5px;
 }
 
+/* Estilos del botón de reserva */
+.reservas h3{
+    color: #663399;
+}
+
+/* Estilos del pie de página */
 footer {
     background-color: #333;
     color: #f8f9fa;
