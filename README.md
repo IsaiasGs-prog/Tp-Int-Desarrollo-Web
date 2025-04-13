@@ -4,4 +4,4 @@ Integrantes:
 2- Mernes, Eileen Isabella (Usuario: isabellamernes)
 3- Silvestri Isaias Emanuel (Usuario: IsaiasGs-prog)
 4- Rodriguez Tamara (Usuario: Tami2873)
-5- Gomez Micaela (Usuairo: Mica16Gomez)
+5- Gomez Micaela (Usuario: Mica16Gomez)
