@@ -7,26 +7,43 @@
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
 </head>
 <body>
-    
     <header>
         <nav>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="institucional.html">Informacion institucional</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
-                
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="contact-section">
             <h2><b>Contactanos</b></h2>
             <p>¿Tenés una idea? ¿Querés cotizar tu evento?</p>
             <p>En IDW S.A. estamos para ayudarte a crear momentos inolvidables.</p>
             <p>Completá el formulario o escribinos por nuestras redes. ¡Nos encantaría saber de vos!</p>
-            <p>📍 Salones en Concordia, Entre Rios.</p>
-            <p>Email: mailto:IDW.SA@gmail.com </p>
-            <p>Whatsapp: +54 345420090 </a></p>
+            <div class="contact-details">
+                <p>📍 Salones en Concordia, Entre Rios.</p>
+                <p>Email: <a href="mailto:IDW.SA@gmail.com">IDW.SA@gmail.com</a></p>
+                <p>Whatsapp: <a href="https://wa.me/54345420090" target="_blank">+54 345420090</a></p>
+            </div>
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="submit-container">
+                    <input type="submit" value="Enviar Consulta" class="submit-input">
+                </div>
+            </form>
         </section>
     </main>
     <footer>
