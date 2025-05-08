@@ -14,41 +14,20 @@ body {
 nav {
     background-color: #663399;
     overflow: hidden;
-    position: sticky;
+    position: sticky; /* Hace que la barra de navegación se fije en la parte superior */
     top: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    padding: 0 20px;
+    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
 }
-
-
-nav .contenedor-flex {
-    display: flex;
-    align-items: center;
-}
-
-nav .contenedor-flex .logo { 
-    margin-right: 2rem;
-    max-height: 120px; 
-    width: auto; 
-    display: block;
-}
-
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: flex-start;
-    align-items: center; 
+    justify-content: center; /* Centra los elementos de la lista */
 }
-
 nav ul li {
-    margin: 0;
+    margin: 0; /* Elimina el margen predeterminado de los elementos de la lista */
 }
-
 nav ul li a {
     color: white;
     text-align: center;
@@ -57,23 +36,22 @@ nav ul li a {
     text-decoration: none;
     font-size: 1rem;
 }
-
 nav ul li a:hover {
-    background-color: rgba(195, 131, 255, 0.945);
+    background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
 }
 
 header h1{
     text-align: center;
     margin-top: 20px;
     font-size: 2.5rem;
-    color: #663399; 
+    color: #663399; /* Color de texto del encabezado */
 }
 header h2{
     text-align: center;
     padding: 20px;
     margin-top: 10px;
     font-size: 1.5rem;
-    color: #663399; 
+    color: #663399; /* Color de texto del encabezado */
 }
 
 header p{
