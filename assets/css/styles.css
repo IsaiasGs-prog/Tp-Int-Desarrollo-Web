@@ -40,11 +40,24 @@ nav ul li a:hover {
     background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    margin-right: auto;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 header h1{
     text-align: center;
     margin-top: 20px;
     font-size: 2.5rem;
     color: #663399; /* Color de texto del encabezado */
+    text-transform: uppercase; /* Transforma el texto a mayúsculas */
 }
 header h2{
     text-align: center;
@@ -62,6 +75,9 @@ header p{
 
 main {
     flex-grow: 1; /* Permite que el main crezca y empuje el footer hacia abajo */
+    text-align: left;
+    padding: 0 20px 0 20px;
+    font-size: 1.25rem;
 }
 
 .contact-section {
