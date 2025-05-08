@@ -14,20 +14,41 @@ body {
 nav {
     background-color: #663399;
     overflow: hidden;
-    position: sticky; /* Hace que la barra de navegación se fije en la parte superior */
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+    z-index: 1000;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 20px;
 }
+
+
+nav .contenedor-flex {
+    display: flex;
+    align-items: center;
+}
+
+nav .contenedor-flex .logo { 
+    margin-right: 2rem;
+    max-height: 120px; 
+    width: auto; 
+    display: block;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center; /* Centra los elementos de la lista */
+    justify-content: flex-start;
+    align-items: center; 
 }
+
 nav ul li {
-    margin: 0; /* Elimina el margen predeterminado de los elementos de la lista */
+    margin: 0;
 }
+
 nav ul li a {
     color: white;
     text-align: center;
@@ -36,36 +57,23 @@ nav ul li a {
     text-decoration: none;
     font-size: 1rem;
 }
+
 nav ul li a:hover {
-    background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
+    background-color: rgba(195, 131, 255, 0.945);
 }
-
-.logo {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px 20px;
-    margin-right: auto;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
 
 header h1{
     text-align: center;
     margin-top: 20px;
     font-size: 2.5rem;
-    color: #663399; /* Color de texto del encabezado */
-    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    color: #663399; 
 }
 header h2{
     text-align: center;
     padding: 20px;
     margin-top: 10px;
     font-size: 1.5rem;
-    color: #663399; /* Color de texto del encabezado */
+    color: #663399; 
 }
 
 header p{

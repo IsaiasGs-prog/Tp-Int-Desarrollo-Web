@@ -48,20 +48,70 @@ nav ul li a:hover {
     font-weight: bold;
     text-decoration: none;
 }
-/* Estilos del header*/
+/* Estilos de la barra de navegación */
+nav {
+    background-color: #663399;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+
+nav .contenedor-flex {
+    display: flex;
+    align-items: center;
+}
+
+nav .contenedor-flex .logo { 
+    margin-right: 2rem;
+    max-height: 120px; 
+    width: auto; 
+    display: block;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; 
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    background-color: rgba(195, 131, 255, 0.945);
+}
+
 header h1{
     text-align: center;
     margin-top: 20px;
     font-size: 2.5rem;
-    color: #663399; /* Color de texto del encabezado */
-    text-transform: uppercase; /* Transforma el texto a mayúsculas */
+    color: #663399; 
 }
 header h2{
     text-align: center;
     padding: 20px;
     margin-top: 10px;
     font-size: 1.5rem;
-    color: #663399; /* Color de texto del encabezado */
+    color: #663399; 
 }
 
 header p{
