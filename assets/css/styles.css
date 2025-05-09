@@ -6,6 +6,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ebe9e9;
+    display: flex;
+    flex-direction: column; /* Para que el footer esté al final */
+    min-height: 100vh; /* Para que el body ocupe al menos toda la altura de la pantalla */
 }
 /* Estilos de la barra de navegación */
 nav {
@@ -35,6 +38,9 @@ nav ul li a {
 }
 nav ul li a:hover {
     background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
+    padding: 0.75rem 1.25rem;                /* ajusta el “tamaño” del recuadro */
+    border: 2px;                  /* grosor y color de borde */
+    border-radius: 5px;
 }
 
 header h1{
@@ -55,6 +61,106 @@ header p{
     text-align: left;
     padding: 0 20px 0 20px;
     font-size: 1.25rem;
+}
+
+main {
+    flex-grow: 1; /* Permite que el main crezca y empuje el footer hacia abajo */
+    text-align: left;
+    padding: 0 20px 0 20px;
+    font-size: 1.25rem;
+}
+
+.contact-section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-section p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.contact-details {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+}
+
+.contact-details a {
+    color: #663399;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center; /* Centra el input de submit */
+}
+
+.submit-input {
+    background-color: #663399;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+.submit-input:hover {
+    background-color: rgba(102, 51, 153, 0.8);
 }
 
 .container {
@@ -123,16 +229,19 @@ footer {
     color: #f8f9fa;
     padding: 30px 20px;
     margin-top: 30px;
-    position: relative;
     text-align: center;
 }
 footer h5 {
-    text-align: left;
+    text-align: center; /* Centra el título del footer */
+    margin-bottom: 10px; /* Añade un poco de espacio debajo del título */
 }
 
 footer p {
-    text-align: center;
     font-size: 15px;
+    margin-bottom: 10px; /* Añade un poco de espacio debajo del párrafo */
+}
+footer div {
+    text-align: center; /* Centra los íconos de redes sociales */
 }
 footer a svg {
     width: 20px;
