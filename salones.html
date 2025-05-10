@@ -38,31 +38,43 @@
         <section class="container">
             <h1 id="inicio">Nuestro Catálogo</h1>
             <p>Encuentra el salón perfecto para tu evento especial.</p>
-            <div id="salones" class="gallery">
+            <div id="salones" class="row">
+            <div class="col-md-4 mb-4">
                 <article class="card">
-                    <img src="img/salones/SalonAqua.jpg" alt="Salón Aqua">
-                    <h3>Salon Aqua</h3>
+                <img src="img/salones/SalonAqua.jpg" alt="Salón Aqua" class="img-fluid">
+                <h3>Salon Aqua</h3>
                 </article>
+            </div>
+            <div class="col-md-4 mb-4">
                 <article class="card">
-                    <img src="img/salones/SalonNeon.jpg" alt="Salón Neon">
+                    <img src="img/salones/SalonNeon.jpg" alt="Salón Neon" class="img-fluid">
                     <h3>Salón Neon</h3>
                 </article>
+            </div>
+            <div class="col-md-4 mb-4">
                 <article class="card">
-                    <img src="img/salones/SalonModerno.jpg" alt="Salón Moderno">
+                    <img src="img/salones/SalonModerno.jpg" alt="Salón Moderno" class="img-fluid">
                     <h3>Salón Moderno</h3>
                 </article>
+            </div>
+            <div class="col-md-4 mb-4">
                 <article class="card">
-                    <img src="img/salones/SalonRustico.jpg" alt="Salón Rústico">
+                    <img src="img/salones/SalonRustico.jpg" alt="Salón Rústico" class="img-fluid">
                     <h3>Salón Rústico</h3>
                 </article>
+            </div>
+            <div class="col-md-4 mb-4">
                 <article class="card">
-                    <img src="img/salones/SalonInfantil.jpg" alt="Salón de Fiesta Infantil">
+                    <img src="img/salones/SalonInfantil.jpg" alt="Salón de Fiesta Infantil" class="img-fluid">
                     <h3>Salón de Fiesta Infantil</h3>
                 </article>
+            </div>
+            <div class="col-md-4 mb-4">
                 <article class="card">
-                    <img src="img/salones/SalonInfantilModerno.jpg" alt="Salón de Fiesta Infantil">
+                    <img src="img/salones/SalonInfantilModerno.jpg" alt="Salón de Fiesta Infantil Moderno" class="img-fluid">
                     <h3>Salón de Fiesta Infantil Moderno</h3>
                 </article>
+            </div>
             </div>
         </section>
         <section class="reservas-section">
@@ -79,6 +91,7 @@
                 <input type="date" id="fecha" name="fecha" required>
                 <label for="salon">Selecciona el salón:</label>
                 <select id="salon" name="salon">
+                    <option value="salon0"> </option>
                     <option value="salon1">Salón Aqua</option>
                     <option value="salon2">Salón Neon</option>
                     <option value="salon3">Salón Moderno</option>
