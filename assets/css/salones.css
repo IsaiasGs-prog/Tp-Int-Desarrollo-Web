@@ -77,32 +77,24 @@ nav .contenedor-flex .logo {
     display: block;
 }
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center; 
+/* Hero búsqueda */
+.hero-search {
+    position: relative;
+    background: url('/Tp-Int-Desarrollo-Web/img/salones/SalonInfantilModerno.jpg') center/cover no-repeat;
+    color: #fff;
+    height: 40vh;
 }
-
-nav ul li {
-    margin: 0;
+.hero-search::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
 }
-
-nav ul li a {
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    display: block;
-    text-decoration: none;
-    font-size: 1rem;
+.hero-search .container {
+    position: relative;
+    z-index: 1;
 }
-
-nav ul li a:hover {
-    background-color: rgba(195, 131, 255, 0.945);
-}
-
+    
 header h1{
     text-align: center;
     margin-top: 20px;
@@ -124,6 +116,7 @@ header p{
 }
 
 .container {
+    color: #663399;
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
