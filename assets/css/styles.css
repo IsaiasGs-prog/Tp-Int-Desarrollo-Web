@@ -90,7 +90,9 @@ main {
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
+.text-justify {
+  text-align: justify !important;
+}
 .contact-details {
     margin-bottom: 20px;
     text-align: center;
