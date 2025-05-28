@@ -56,14 +56,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-<<<<<<< HEAD
-    background-color: rgba(195, 131, 255, 0.945);
-=======
     background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
     padding: 0.75rem 1.25rem;                /* ajusta el “tamaño” del recuadro */
     border: 2px;                  /* grosor y color de borde */
     border-radius: 5px;
->>>>>>> origin/main
 }
 
 .logo {

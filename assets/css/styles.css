@@ -59,14 +59,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-<<<<<<< HEAD
-    background-color: rgba(195, 131, 255, 0.945);
-=======
     background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
     padding: 0.75rem 1.25rem;                /* ajusta el “tamaño” del recuadro */
     border: 2px;                  /* grosor y color de borde */
     border-radius: 5px;
->>>>>>> origin/main
 }
 
 header h1{
@@ -91,14 +87,10 @@ header p{
 
 
 main {
-<<<<<<< HEAD
-    flex-grow: 1; 
-=======
     flex-grow: 1; /* Permite que el main crezca y empuje el footer hacia abajo */
     text-align: left;
     padding: 0 20px 0 20px;
     font-size: 1.25rem;
->>>>>>> origin/main
 }
 
 .contact-section {
@@ -287,8 +279,6 @@ footer a svg:hover {
 }
 
 
-<<<<<<< HEAD
-=======
    /* --- Estilos Informacion Institucional --- */
 
     .hero-institucional {
@@ -352,4 +342,3 @@ footer a svg:hover {
       object-fit: cover;
       height: 200px;
     }
->>>>>>> origin/main
