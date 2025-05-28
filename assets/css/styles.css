@@ -59,7 +59,14 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+<<<<<<< HEAD
     background-color: rgba(195, 131, 255, 0.945);
+=======
+    background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
+    padding: 0.75rem 1.25rem;                /* ajusta el “tamaño” del recuadro */
+    border: 2px;                  /* grosor y color de borde */
+    border-radius: 5px;
+>>>>>>> origin/main
 }
 
 header h1{
@@ -82,8 +89,16 @@ header p{
     font-size: 1.25rem;
 }
 
+
 main {
+<<<<<<< HEAD
     flex-grow: 1; 
+=======
+    flex-grow: 1; /* Permite que el main crezca y empuje el footer hacia abajo */
+    text-align: left;
+    padding: 0 20px 0 20px;
+    font-size: 1.25rem;
+>>>>>>> origin/main
 }
 
 .contact-section {
@@ -105,7 +120,9 @@ main {
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
+.text-justify {
+  text-align: justify !important;
+}
 .contact-details {
     margin-bottom: 20px;
     text-align: center;
@@ -270,3 +287,69 @@ footer a svg:hover {
 }
 
 
+<<<<<<< HEAD
+=======
+   /* --- Estilos Informacion Institucional --- */
+
+    .hero-institucional {
+      position: relative;
+      height: 50vh;
+      background: url('/Tp-Int-Desarrollo-Web/img/salones/SalonInfantilModerno.jpg') center/cover no-repeat;
+      color: #fff;
+    }
+    .hero-institucional .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    .hero-institucional .content {
+      position: relative;
+      z-index: 1;
+    }
+    
+   
+
+/* sección con fondo violeta */
+.mission-vision-section {
+  background-color: #663399;
+}
+
+/* tarjetas siempre blancas */
+.mission-vision-section .card {
+  background-color: #fff;
+}
+
+    .mission-card, .vision-card {
+      border: none;
+      background: #f8f9fa;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 2rem;
+      margin-top: 2rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 1rem; top: 0; bottom: 0;
+      width: 4px;
+      background: #663399;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.3rem;
+      top: 0;
+      width: 0.8rem; height: 0.8rem;
+      background: #663399;
+      border-radius: 50%;
+    }
+    .team-card img {
+      object-fit: cover;
+      height: 200px;
+    }
+>>>>>>> origin/main

@@ -56,21 +56,83 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+<<<<<<< HEAD
     background-color: rgba(195, 131, 255, 0.945);
+=======
+    background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
+    padding: 0.75rem 1.25rem;                /* ajusta el “tamaño” del recuadro */
+    border: 2px;                  /* grosor y color de borde */
+    border-radius: 5px;
+>>>>>>> origin/main
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    margin-right: auto;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+/* Estilos de la barra de navegación */
+nav {
+    background-color: #663399;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+
+nav .contenedor-flex {
+    display: flex;
+    align-items: center;
+}
+
+nav .contenedor-flex .logo { 
+    margin-right: 2rem;
+    max-height: 120px; 
+    width: auto; 
+    display: block;
+}
+
+/* Hero búsqueda */
+.hero-search {
+    position: relative;
+    background: url('/Tp-Int-Desarrollo-Web/img/salones/SalonInfantilModerno.jpg') center/cover no-repeat;
+    color: #fff;
+    height: 40vh;
+}
+.hero-search::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+.hero-search .container {
+    position: relative;
+    z-index: 1;
+}
+    
 header h1{
     text-align: center;
     margin-top: 20px;
     font-size: 2.5rem;
-    color: #663399; /* Color de texto del encabezado */
+    color: #663399; 
 }
 header h2{
     text-align: center;
     padding: 20px;
     margin-top: 10px;
     font-size: 1.5rem;
-    color: #663399; /* Color de texto del encabezado */
+    color: #663399; 
 }
 
 header p{
@@ -80,6 +142,7 @@ header p{
 }
 
 .container {
+    color: #663399;
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
@@ -145,22 +208,92 @@ h1 {
     color: #663399;
 }
 
+.reservas {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservas-section h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #663399; /* Color de texto del encabezado */
+}
+.reservas-section p {
+    text-align: center;
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+.reservas label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.reservas input[type="text"],
+.reservas input[type="email"],
+.reservas textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.reservas textarea {
+    resize: vertical;
+}
+
+.submit-container {
+    display: flex;
+    justify-content: center; /* Centra el input de submit */
+}
+
+.submit-input {
+    background-color: #663399;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content; /* Ajusta el ancho al contenido */
+}
+
+.submit-input:hover {
+    background-color: rgba(102, 51, 153, 0.8);
+}
+
 /* Estilos del pie de página */
 footer {
     background-color: #333;
     color: #f8f9fa;
     padding: 30px 20px;
     margin-top: 30px;
-    position: relative;
     text-align: center;
 }
 footer h5 {
-    text-align: left;
+    text-align: center; /* Centra el título del footer */
+    margin-bottom: 10px; /* Añade un poco de espacio debajo del título */
 }
 
 footer p {
-    text-align: center;
     font-size: 15px;
+    margin-bottom: 10px; /* Añade un poco de espacio debajo del párrafo */
+}
+footer div {
+    text-align: center; /* Centra los íconos de redes sociales */
 }
 footer a svg {
     width: 20px;
