@@ -217,7 +217,7 @@ class SalonManager {
 
         if (salon) {
             
-            document.getElementById('form-title').textContent = '✏️ Modificar Salón';
+            document.getElementById('form-title').textContent = 'Modificar Salón';
             document.getElementById('btnSubmit').value = 'Guardar Cambios';
             document.getElementById('btnCancelar').style.display = 'inline-block';
 
@@ -294,13 +294,13 @@ class SalonManager {
                 </td>
                 <td class="actions">
                     <button class="submit-input btn-small" onclick="window.salonManager.visualizarSalon(${salon.id})" title="Ver detalles">
-                        👁️ Ver
+                        Ver
                     </button>
                     <button class="submit-input btn-small" onclick="window.salonManager.editarSalon(${salon.id})" title="Editar">
-                        ✏️ Editar
+                        Editar
                     </button>
                     <button class="btn-danger btn-small" onclick="window.salonManager.eliminarSalon(${salon.id})" title="Eliminar">
-                        🗑️ Eliminar
+                        Eliminar
                     </button>
                 </td>
             `;
@@ -340,13 +340,13 @@ class SalonManager {
                 </div>
                 <div class="actions" style="display: flex; gap: 5px; justify-content: center;">
                     <button class="submit-input btn-small" onclick="window.salonManager.visualizarSalon(${salon.id})">
-                        👁️ Ver
+                        Ver
                     </button>
                     <button class="submit-input btn-small" onclick="window.salonManager.editarSalon(${salon.id})">
-                        ✏️ Editar
+                        Editar
                     </button>
                     <button class="btn-danger btn-small" onclick="window.salonManager.eliminarSalon(${salon.id})">
-                        🗑️ Eliminar
+                        Eliminar
                     </button>
                 </div>
             `;
