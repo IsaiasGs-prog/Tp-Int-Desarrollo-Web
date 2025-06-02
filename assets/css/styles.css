@@ -7,27 +7,48 @@ body {
     padding: 0;
     background-color: #ebe9e9;
     display: flex;
-    flex-direction: column; /* Para que el footer esté al final */
-    min-height: 100vh; /* Para que el body ocupe al menos toda la altura de la pantalla */
+    flex-direction: column; 
+    min-height: 100vh; 
 }
 /* Estilos de la barra de navegación */
 nav {
     background-color: #663399;
     overflow: hidden;
-    position: sticky; /* Hace que la barra de navegación se fije en la parte superior */
+    position: sticky;
     top: 0;
-    z-index: 1000; /* Asegura que la barra de navegación esté por encima de otros elementos */
+    z-index: 1000;
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 0 20px;
 }
+
+
+nav .contenedor-flex {
+    display: flex;
+    align-items: center;
+}
+
+nav .contenedor-flex .logo { 
+    margin-right: 2rem;
+    max-height: 120px; 
+    width: auto; 
+    display: block;
+}
+
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
     display: flex;
-    justify-content: center; /* Centra los elementos de la lista */
+    justify-content: flex-start;
+    align-items: center; 
 }
+
 nav ul li {
-    margin: 0; /* Elimina el margen predeterminado de los elementos de la lista */
+    margin: 0;
 }
+
 nav ul li a {
     color: white;
     text-align: center;
@@ -36,10 +57,11 @@ nav ul li a {
     text-decoration: none;
     font-size: 1rem;
 }
+
 nav ul li a:hover {
-    background-color: rgba(195, 131, 255, 0.945); /* Cambia el color de fondo al pasar el mouse */
-    padding: 0.75rem 1.25rem;                /* ajusta el “tamaño” del recuadro */
-    border: 2px;                  /* grosor y color de borde */
+    background-color: rgba(195, 131, 255, 0.945); 
+    padding: 0.75rem 1.25rem;                
+    border: 2px;                  
     border-radius: 5px;
 }
 
@@ -47,14 +69,14 @@ header h1{
     text-align: center;
     margin-top: 20px;
     font-size: 2.5rem;
-    color: #663399; /* Color de texto del encabezado */
+    color: #663399; 
 }
 header h2{
     text-align: center;
     padding: 20px;
     margin-top: 10px;
     font-size: 1.5rem;
-    color: #663399; /* Color de texto del encabezado */
+    color: #663399; 
 }
 
 header p{
@@ -65,7 +87,7 @@ header p{
 
 
 main {
-    flex-grow: 1; /* Permite que el main crezca y empuje el footer hacia abajo */
+    flex-grow: 1; 
     text-align: left;
     padding: 0 20px 0 20px;
     font-size: 1.25rem;
@@ -90,7 +112,9 @@ main {
     line-height: 1.6;
     margin-bottom: 15px;
 }
-
+.text-justify {
+  text-align: justify !important;
+}
 .contact-details {
     margin-bottom: 20px;
     text-align: center;
@@ -145,7 +169,7 @@ main {
 
 .submit-container {
     display: flex;
-    justify-content: center; /* Centra el input de submit */
+    justify-content: center; 
 }
 
 .submit-input {
@@ -157,7 +181,7 @@ main {
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: fit-content; /* Ajusta el ancho al contenido */
+    width: fit-content; 
 }
 
 .submit-input:hover {
@@ -187,21 +211,21 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 .card:hover {
-    transform: translateY(-10px); /* Eleva la tarjeta al hacer hover */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+    transform: translateY(-10px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 .card img {
     width: 100%;
     height: 250px;
     object-fit: cover;
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out; /* Transición suave para la imagen */
+    transition: transform 0.3s ease-in-out; 
 }
 .card img:hover {
-    transform: scale(1.05); /* Escala la imagen al hacer hover */
+    transform: scale(1.05); 
 }
 .card h3 {
     font-size: 1.2rem;
@@ -233,29 +257,30 @@ footer {
     text-align: center;
 }
 footer h5 {
-    text-align: center; /* Centra el título del footer */
-    margin-bottom: 10px; /* Añade un poco de espacio debajo del título */
+    text-align: center; 
+    margin-bottom: 10px; 
 }
 
 footer p {
     font-size: 15px;
-    margin-bottom: 10px; /* Añade un poco de espacio debajo del párrafo */
+    margin-bottom: 10px; 
 }
 footer div {
-    text-align: center; /* Centra los íconos de redes sociales */
+    text-align: center; 
 }
 footer a svg {
     width: 20px;
     height: 20px;
     margin-right: 10px;
-    fill: #f8f9fa; /* Color de los iconos SVG */
+    fill: #f8f9fa; 
 }
 footer a svg:hover {
-    fill: rgba(195, 131, 255, 0.945); /* Cambia el color al pasar el mouse */
+    fill: rgba(195, 131, 255, 0.945); 
 }
 
 
-   /* --- Estilos Institucional --- */
+   /* --- Estilos Informacion Institucional --- */
+
     .hero-institucional {
       position: relative;
       height: 50vh;
@@ -317,3 +342,5 @@ footer a svg:hover {
       object-fit: cover;
       height: 200px;
     }
+
+
