@@ -33,6 +33,10 @@
             <a class="nav-link text-white px-3" href="./contacto.html"
               >Contacto</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link text-white px-3" href="./salones-crud.html"
+              >Administración</a>
+          </li>
         </ul>
       </nav>
       <!-- HERO -->
@@ -122,36 +126,43 @@
         </div>
       </section>
       <!-- RESERVAS -->
-      <section class="reservas-section">
-        <h3><b>Reservas</b></h3>
-        <p>
-          Para realizar una reserva, por favor completa el siguiente formulario:
-        </p>
-        <form class="reservas" action="reservas.php" method="post">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required />
-          <label for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" required />
-          <label for="fecha">Fecha del evento:</label>
-          <input type="date" id="fecha" name="fecha" required />
-          <label for="salon">Selecciona el salón:</label>
-          <select id="salon" name="salon">
-            <option value="salon0"></option>
-            <option value="salon1">Salón Aqua</option>
-            <option value="salon2">Salón Neon</option>
-            <option value="salon3">Salón Moderno</option>
-            <option value="salon4">Salón Rústico</option>
-            <option value="salon5">Salón de Fiesta Infantil</option>
-            <option value="salon6">Salón de Fiesta Infantil Moderno</option>
-          </select>
-          <div class="text-center mt-3">
-            <input type="submit" value="Reservar" class="submit-input" />
-          </div>
-          <!--<input type="submit" value="Reservar" class="submit-input">-->
-        </form>
-      </section>
+<section class="reservas-section py-5">
+  <h3 class="text-center mb-3"><b>Reservas</b></h3>
+  <p class="text-center mb-4">
+    Para realizar una reserva, por favor completa el siguiente formulario:
+  </p>
+
+  <!-- Aplicamos la clase "form-centrado" para centrar el form -->
+  <form class="reservas form-centrado" action="reservas.php" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required />
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" name="telefono" required />
+
+    <label for="fecha">Fecha del evento:</label>
+    <input type="date" id="fecha" name="fecha" required />
+
+    <label for="salon">Selecciona el salón:</label>
+    <select id="salon" name="salon">
+      <option value="salon0"></option>
+      <!--<option value="salon1">Salón Aqua</option>
+      <option value="salon2">Salón Neon</option>
+      <option value="salon3">Salón Moderno</option>
+      <option value="salon4">Salón Rústico</option>
+      <option value="salon5">Salón de Fiesta Infantil</option>
+      <option value="salon6">Salón de Fiesta Infantil Moderno</option>-->
+    </select>
+
+    <div class="text-center mt-3">
+      <input type="submit" value="Reservar" class="submit-input" />
+    </div>
+  </form>
+</section>
+
     </main>
     <footer>
       <h4><b>Seguinos en Redes Sociales</b></h4>
@@ -182,6 +193,46 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const contenedor = document.getElementById('salones');
+        const select = document.getElementById('salon');
+        const salones = JSON.parse(localStorage.getItem('salones_eventos')) || [];
+
+        // Renderizar tarjetas de catálogo
+         contenedor.innerHTML = '';
+         if (salones.length === 0) {
+            contenedor.innerHTML = '<p>No hay salones disponibles en este momento.</p>';
+          } else {
+            salones.forEach(salon => {
+              if (salon.disponible) {
+                const card = document.createElement('div');
+                card.className = 'col-12 col-sm-6 col-lg-4 mb-4';
+                card.innerHTML = `
+                <article class="card">
+                  <img src="${salon.imagen}" alt="${salon.nombre}" class="img-fluid" />
+                  <h3>${salon.nombre}</h3>
+                  <p style="font-size: 0.9rem;">${salon.descripcion || ''}</p>
+                </article>
+              `;
+          contenedor.appendChild(card);
+           }
+         });
+        }
+
+        // Renderizar opciones del select de reservas
+         select.innerHTML = '<option value="">Seleccione un salón</option>';
+         salones.forEach(salon => {
+           if (salon.disponible) {
+              const option = document.createElement('option');
+              option.value = salon.id;
+              option.textContent = salon.nombre;
+              select.appendChild(option);
+            }
+          });
+        });
     </script>
   </body>
 </html>
