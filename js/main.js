@@ -4,7 +4,7 @@ const SALONES_INICIALES = [
         nombre: "Salón Arcoíris",
         capacidad: 50,
         precio: 25000,
-        ubicacion: "Centro",
+        ubicacion: "Nicaragua 2873, Concordia (Entre Rios)",
         descripcion: "Salón colorido y alegre, perfecto para fiestas infantiles con temática de arcoíris.",
         imagen: "https://i.pinimg.com/736x/93/b0/c5/93b0c54d7c62bfadef8dd874cc95d036.jpg",
         servicios: ["sonido", "decoracion", "animacion"],
@@ -15,7 +15,7 @@ const SALONES_INICIALES = [
         nombre: "Salón Aventura",
         capacidad: 75,
         precio: 35000,
-        ubicacion: "Norte",
+        ubicacion: "Alfonsín 345, Concordia (Entre Rios)",
         descripcion: "Espacio amplio con juegos de aventura y zona de escalada para niños.",
         imagen: "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400",
         servicios: ["sonido", "juegos", "catering"],
@@ -26,7 +26,7 @@ const SALONES_INICIALES = [
         nombre: "Salón Princesas",
         capacidad: 40,
         precio: 30000,
-        ubicacion: "Sur",
+        ubicacion: "Mantilla 87, Concordia (Entre Rios)",
         descripcion: "Decorado especialmente para fiestas de princesas con castillo inflable.",
         imagen: "https://images.unsplash.com/photo-1464207687429-7505649dae38?w=400",
         servicios: ["decoracion", "animacion", "catering"],
@@ -293,14 +293,14 @@ class SalonManager {
                     </span>
                 </td>
                 <td class="actions">
-                    <button class="submit-input btn-small" onclick="window.salonManager.visualizarSalon(${salon.id})" title="Ver detalles">
-                        Ver
+                    <button class="btn-ver btn-small" onclick="window.salonManager.visualizarSalon(${salon.id})" title="Ver detalles">
+                        👁Ver
                     </button>
-                    <button class="submit-input btn-small" onclick="window.salonManager.editarSalon(${salon.id})" title="Editar">
-                        Editar
+                    <button class="btn-editar btn-small" onclick="window.salonManager.editarSalon(${salon.id})" title="Editar">
+                        ✏️Editar
                     </button>
                     <button class="btn-danger btn-small" onclick="window.salonManager.eliminarSalon(${salon.id})" title="Eliminar">
-                        Eliminar
+                        🗑Eliminar
                     </button>
                 </td>
             `;
@@ -339,14 +339,15 @@ class SalonManager {
                     </span>
                 </div>
                 <div class="actions" style="display: flex; gap: 5px; justify-content: center;">
-                    <button class="submit-input btn-small" onclick="window.salonManager.visualizarSalon(${salon.id})">
-                        Ver
+                    <button class="btn-ver btn-small" onclick="window.salonManager.visualizarSalon(${salon.id})" title="Ver detalles">
+                        👁Ver
                     </button>
-                    <button class="submit-input btn-small" onclick="window.salonManager.editarSalon(${salon.id})">
-                        Editar
+                    <button class="btn-editar btn-small" onclick="window.salonManager.editarSalon(${salon.id})" title="Editar">
+                        ✏️Editar
                     </button>
-                    <button class="btn-danger btn-small" onclick="window.salonManager.eliminarSalon(${salon.id})">
-                        Eliminar
+                    <button class="btn-danger btn-small" onclick="window.salonManager.eliminarSalon(${salon.id})" title="Eliminar">
+                        🗑Eliminar
+                    </button>
                     </button>
                 </div>
             `;
