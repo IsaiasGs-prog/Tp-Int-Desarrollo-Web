@@ -67,7 +67,7 @@
         <h1 id="inicio">Nuestro Catálogo</h1>
         <p>Encuentra el salón perfecto para tu evento especial.</p>
         <div id="salones" class="row">
-          <div class="col-12 col-sm-6 col-lg-4 mb-4">
+         <!-- <div class="col-12 col-sm-6 col-lg-4 mb-4">
             <article class="card">
               <img
                 src="img/salones/SalonAqua.jpg"
@@ -121,7 +121,7 @@
               <h3>Salón Infantil Moderno</h3>
             </article>
           </div>
-        </div>
+        </div> -->
       </section>
     </main>
     <footer>
@@ -153,6 +153,36 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
       crossorigin="anonymous">
+    </script>
+    <script src="js/main.js"></script>
+    <script>
+     document.addEventListener('DOMContentLoaded', function () {
+      const contenedor = document.getElementById('salones');
+      const salones = JSON.parse(localStorage.getItem('salones_eventos')) || [];
+
+      contenedor.innerHTML = '';
+
+      if (salones.length === 0) {
+      contenedor.innerHTML = '<p>No hay salones disponibles en este momento.</p>';
+      return;
+      }
+
+      salones.forEach(salon => {
+         if (salon.disponible) {
+        const col = document.createElement('div');
+        col.className = 'col-12 col-sm-6 col-lg-4 mb-4';
+
+        col.innerHTML = `
+          <article class="card">
+            <img src="${salon.imagen}" alt="${salon.nombre}" class="img-fluid" />
+            <h3>${salon.nombre}</h3>
+            <p style="font-size: 0.9rem;">${salon.descripcion || ''}</p>
+          </article>
+        `;
+        contenedor.appendChild(col);
+          }
+          });
+        });
     </script>
   </body>
 </html>
