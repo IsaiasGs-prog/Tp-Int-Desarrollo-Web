@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: -250px; /* Oculta la barra lateral inicialmente a la derecha */
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    background-color: #663399;
+}
+.sidebar h2 {
+    color: white;
+    text-align: center;
+}
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+.sidebar ul li a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+.sidebar ul li a:hover {
+    color: rgba(195, 131, 255, 0.945)
+}
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px; /* Cambiado a la derecha para que esté dentro de la barra lateral */
+}
+
+.close-btn:hover {
+    color: rgba(195, 131, 255, 0.945); /* Cambiado para que coincida con el hover de los enlaces */
+}
+.content {
+    transition: margin-right 0.3s; /* Cambiado a margin-right para que se ajuste al abrir la barra lateral */
+    padding: 16px;
+    position: relative; /* Para posicionar el botón de abrir */
+}
+.open-btn {
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute; /* Cambiado a absolute para posicionarlo */
+    top: 16px; /* Ajusta la posición vertical según sea necesario */
+    right: 16px; /* Alineado a la derecha */
+}
+
