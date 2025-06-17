@@ -10,35 +10,70 @@
       crossorigin="anonymous"/>
     <title>Salones</title>
     <link rel="stylesheet" href="assets/css/salones.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
   </head>
   <body>
     <header>
       <!-- NAVBAR -->
       <nav class="navbar navbar-purple py-0 shadow-wide d-flex align-items-center">
-        <!-- Logo/Inicio a la izquierda -->
         <a href="./index.html" class="me-6 ms-3">
           <img src="./img/logo/logo.png" alt="Logo Empresa" height="80" />
         </a>
-        <!-- Resto de opciones a la derecha -->
-        <ul class="nav ms-auto">
+
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="d-none d-lg-block ms-auto">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./salones.html">Salones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./institucional.html"
+                >Información institucional</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./salones-crud.html"
+                >Administración</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="collapse sidebar" id="sidebarMenu">
+        <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="./salones.html"
-              >Salones</a>
+            <a class="nav-link text-white px-3" href="./salones.html">Salones</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white px-3" href="./institucional.html"
-              >Información institucional</a>
+              >Información institucional</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="./contacto.html"
-              >Contacto</a>
+            <a class="nav-link text-white px-3" href="./contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white px-3" href="./salones-crud.html"
-              >Administración</a>
+              >Administración</a
+            >
           </li>
         </ul>
-      </nav>
+      </div>
       <!-- HERO -->
       <section class="bg-purple text-white py-5 text-center position-relative">
         <div class="container position-relative" style="z-index: 1">
