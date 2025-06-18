@@ -421,3 +421,7 @@ body {
         .view-toggle button.active {
             background-color: #4d2973;
         }
+        
+    .hidden-admin {
+    display: none !important; 
+}

@@ -236,7 +236,7 @@
         const select = document.getElementById('salon');
         const salones = JSON.parse(localStorage.getItem('salones_eventos')) || [];
 
-        // Renderizar tarjetas de catálogo
+        
          contenedor.innerHTML = '';
          if (salones.length === 0) {
             contenedor.innerHTML = '<p>No hay salones disponibles en este momento.</p>';
@@ -257,7 +257,7 @@
          });
         }
 
-        // Renderizar opciones del select de reservas
+        
          select.innerHTML = '<option value="">Seleccione un salón</option>';
          salones.forEach(salon => {
            if (salon.disponible) {
@@ -268,6 +268,46 @@
             }
           });
         });
+    </script>
+    <script>
+          
+      document.addEventListener('DOMContentLoaded', function () {
+        const contenedor = document.getElementById('salones');
+        const salones = JSON.parse(localStorage.getItem('salones_eventos') || '[]');
+
+        if (contenedor) { 
+          contenedor.innerHTML = '';
+
+          if (salones.length === 0) {
+            contenedor.innerHTML =
+              '<p>No hay salones disponibles en este momento.</p>';
+            return;
+          }
+
+          
+          salones.filter(salon => salon.disponible).slice(0, 3).forEach((salon) => {
+            const col = document.createElement('div');
+            col.classList.add('col');
+            col.innerHTML = `
+              <div class="card h-100 shadow-sm">
+                <img src="${salon.imagen}" class="card-img-top" alt="${salon.nombre}">
+                <div class="card-body">
+                  <h5 class="card-title">${salon.nombre}</h5>
+                  <p class="card-text">${salon.descripcion}</p>
+                  <ul class="list-unstyled">
+                    <li><strong>Capacidad:</strong> ${salon.capacidad} personas</li>
+                    <li><strong>Precio:</strong> $${salon.precio.toLocaleString()}</li>
+                    <li><strong>Ubicación:</strong> ${salon.ubicacion}</li>
+                  </ul>
+                  <p class="card-text"><strong>Servicios:</strong> ${salon.servicios.join(', ') || 'N/A'}</p>
+                </div>
+              </div>
+            `;
+            contenedor.appendChild(col);
+          });
+        }
+      });
+    
     </script>
   </body>
 </html>

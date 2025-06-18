@@ -431,3 +431,7 @@ footer a svg:hover {
         display: none !important;
     }
 }
+
+.hidden-admin {
+    display: none !important; 
+}
