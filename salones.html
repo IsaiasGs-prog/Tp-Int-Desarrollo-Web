@@ -10,35 +10,75 @@
       crossorigin="anonymous"/>
     <title>Salones</title>
     <link rel="stylesheet" href="assets/css/salones.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
   </head>
   <body>
     <header>
       <!-- NAVBAR -->
-      <nav class="navbar navbar-purple py-0 shadow-wide d-flex align-items-center">
-        <!-- Logo/Inicio a la izquierda -->
+<nav class="navbar navbar-purple py-0 shadow-wide d-flex align-items-center">
         <a href="./index.html" class="me-6 ms-3">
           <img src="./img/logo/logo.png" alt="Logo Empresa" height="80" />
         </a>
-        <!-- Resto de opciones a la derecha -->
-        <ul class="nav ms-auto">
+
+        <button
+          class="navbar-toggler d-lg-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidebarMenu"
+          aria-controls="sidebarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="d-none d-lg-block ms-auto">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./salones.html">Salones</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./institucional.html"
+                >Información institucional</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./contacto.html">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./salones-crud.html"
+                >Administración</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white px-3" href="./login.html"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="collapse sidebar" id="sidebarMenu">
+        <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="./salones.html"
-              >Salones</a>
+            <a class="nav-link text-white px-3" href="./salones.html">Salones</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white px-3" href="./institucional.html"
-              >Información institucional</a>
+              >Información institucional</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="./contacto.html"
-              >Contacto</a>
+            <a class="nav-link text-white px-3" href="./contacto.html">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white px-3" href="./salones-crud.html"
-              >Administración</a>
+              >Administración</a
+            >
           </li>
         </ul>
-      </nav>
+      </div>
       <!-- HERO -->
       <section class="bg-purple text-white py-5 text-center position-relative">
         <div class="container position-relative" style="z-index: 1">
@@ -199,7 +239,7 @@
         const select = document.getElementById('salon');
         const salones = JSON.parse(localStorage.getItem('salones_eventos')) || [];
 
-        // Renderizar tarjetas de catálogo
+        
          contenedor.innerHTML = '';
          if (salones.length === 0) {
             contenedor.innerHTML = '<p>No hay salones disponibles en este momento.</p>';
@@ -220,7 +260,7 @@
          });
         }
 
-        // Renderizar opciones del select de reservas
+        
          select.innerHTML = '<option value="">Seleccione un salón</option>';
          salones.forEach(salon => {
            if (salon.disponible) {
@@ -231,6 +271,46 @@
             }
           });
         });
+    </script>
+    <script>
+          
+      document.addEventListener('DOMContentLoaded', function () {
+        const contenedor = document.getElementById('salones');
+        const salones = JSON.parse(localStorage.getItem('salones_eventos') || '[]');
+
+        if (contenedor) { 
+          contenedor.innerHTML = '';
+
+          if (salones.length === 0) {
+            contenedor.innerHTML =
+              '<p>No hay salones disponibles en este momento.</p>';
+            return;
+          }
+
+          
+          salones.filter(salon => salon.disponible).slice(0, 3).forEach((salon) => {
+            const col = document.createElement('div');
+            col.classList.add('col');
+            col.innerHTML = `
+              <div class="card h-100 shadow-sm">
+                <img src="${salon.imagen}" class="card-img-top" alt="${salon.nombre}">
+                <div class="card-body">
+                  <h5 class="card-title">${salon.nombre}</h5>
+                  <p class="card-text">${salon.descripcion}</p>
+                  <ul class="list-unstyled">
+                    <li><strong>Capacidad:</strong> ${salon.capacidad} personas</li>
+                    <li><strong>Precio:</strong> $${salon.precio.toLocaleString()}</li>
+                    <li><strong>Ubicación:</strong> ${salon.ubicacion}</li>
+                  </ul>
+                  <p class="card-text"><strong>Servicios:</strong> ${salon.servicios.join(', ') || 'N/A'}</p>
+                </div>
+              </div>
+            `;
+            contenedor.appendChild(col);
+          });
+        }
+      });
+    
     </script>
   </body>
 </html>
