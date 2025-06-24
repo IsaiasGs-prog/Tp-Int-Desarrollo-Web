@@ -7,18 +7,20 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
-      crossorigin="anonymous"/>
+      crossorigin="anonymous"
+    />
     <title>Información Institucional</title>
     <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
   </head>
   <body>
     <header>
-      <!-- NAVBAR -->
-<nav class="navbar navbar-purple py-0 shadow-wide d-flex align-items-center">
+      <!-- NAV BAR-->
+      <nav
+        class="navbar navbar-purple py-0 shadow-wide d-flex align-items-center"
+      >
         <a href="./index.html" class="me-6 ms-3">
           <img src="./img/logo/logo.png" alt="Logo Empresa" height="80" />
         </a>
-
         <button
           class="navbar-toggler d-lg-none"
           type="button"
@@ -30,11 +32,12 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="d-none d-lg-block ms-auto">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link text-white px-3" href="./salones.html">Salones</a>
+              <a class="nav-link text-white px-3" href="./salones.html"
+                >Salones</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link text-white px-3" href="./institucional.html"
@@ -42,26 +45,35 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white px-3" href="./contacto.html">Contacto</a>
+              <a class="nav-link text-white px-3" href="./contacto.html"
+                >Contacto</a
+              >
             </li>
-            <li class="nav-item">
+            <li id="adminNavLink" class="nav-item hidden-admin">
               <a class="nav-link text-white px-3" href="./salones-crud.html"
                 >Administración</a
               >
             </li>
-            <li class="nav-item">
+            <li id="usersNavLink" class="nav-item hidden-admin">
+              <a class="nav-link text-white px-3" href="./usuarios.html"
+                >Usuarios</a
+              >
+            </li>
+            <li id="loginLogoutLink" class="nav-item">
               <a class="nav-link text-white px-3" href="./login.html"
-                >Login</a
+                >Iniciar Sesión</a
               >
             </li>
           </ul>
         </div>
       </nav>
-
+      <!-- SIDE BAR-->
       <div class="collapse sidebar" id="sidebarMenu">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="./salones.html">Salones</a>
+            <a class="nav-link text-white px-3" href="./salones.html"
+              >Salones</a
+            >
           </li>
           <li class="nav-item">
             <a class="nav-link text-white px-3" href="./institucional.html"
@@ -69,11 +81,23 @@
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white px-3" href="./contacto.html">Contacto</a>
+            <a class="nav-link text-white px-3" href="./contacto.html"
+              >Contacto</a
+            >
           </li>
-          <li class="nav-item">
+          <li id="adminNavLinkSidebar" class="nav-item hidden-admin">
             <a class="nav-link text-white px-3" href="./salones-crud.html"
               >Administración</a
+            >
+          </li>
+          <li id="usersNavLinkSidebar" class="nav-item hidden-admin">
+            <a class="nav-link text-white px-3" href="./usuarios.html"
+              >Usuarios</a
+            >
+          </li>
+          <li id="loginLogoutLinkSidebar" class="nav-item">
+            <a class="nav-link text-white px-3" href="./login.html"
+              >Iniciar Sesión</a
             >
           </li>
         </ul>
@@ -81,7 +105,8 @@
     </header>
     <!-- HERO -->
     <header
-      class="hero-institucional d-flex align-items-center justify-content-center text-center text-white">
+      class="hero-institucional d-flex align-items-center justify-content-center text-center text-white"
+    >
       <div class="overlay">
         <div class="container position-relative text-center">
           <h1 class="display-4 fw-bold text-white mt-n4">Quienes somos</h1>
@@ -95,9 +120,9 @@
       <!-- ACERCA DE -->
       <section class="container py-5">
         <div class="row align-items-center">
-          <div class="col-md-6">
+          <div class="col-md-6" >
             <h2>Acerca de Nosotros</h2>
-            <p>
+            <p class="text-justify">
               En IDW S.A. somos especialistas en convertir cualquier espacio en
               el escenario perfecto para celebraciones infantiles. Nuestro
               equipo combina creatividad, eficiencia y pasión para diseñar cada
@@ -108,7 +133,8 @@
             <img
               src="./img/salones/PlayLand.jpg"
               alt="Acerca de nosotros"
-              class="img-fluid rounded shadow-sm"/>
+              class="img-fluid rounded shadow-sm"
+            />
           </div>
         </div>
       </section>
@@ -138,29 +164,52 @@
         </div>
       </section>
       <!-- VALORES -->
-      <section class="container py-5">
-        <h2 class="text-center mb-4">Nuestros Valores</h2>
-        <div class="row text-center g-4">
-          <div class="col-6 col-md-3">
-            <i class="bi bi-emoji-smile display-4 text-purple"></i>
-            <h5 class="mt-2">Creatividad</h5>
-          </div>
-          <div class="col-6 col-md-3">
-            <i class="bi bi-people display-4 text-purple"></i>
-            <h5 class="mt-2">Trabajo en Equipo</h5>
-          </div>
-          <div class="col-6 col-md-3">
-            <i class="bi bi-clock display-4 text-purple"></i>
-            <h5 class="mt-2">Puntualidad</h5>
-          </div>
-          <div class="col-6 col-md-3">
-            <i class="bi bi-shield-lock display-4 text-purple"></i>
-            <h5 class="mt-2">Seguridad</h5>
+<section class="valores-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Nuestros Valores</h2>
+    <div class="row justify-content-center gy-4">
+      <!-- Creatividad -->
+      <div class="col-6 col-md-3">
+        <div class="card valor-card h-100 text-center border-0">
+          <div class="card-body d-flex flex-column align-items-center">
+            <i class="bi bi-emoji-smile mb-3"></i>
+            <h5 class="card-title">Creatividad</h5>
           </div>
         </div>
-      </section>
+      </div>
+      <!-- Trabajo en Equipo -->
+      <div class="col-6 col-md-3">
+        <div class="card valor-card h-100 text-center border-0">
+          <div class="card-body d-flex flex-column align-items-center">
+            <i class="bi bi-people mb-3"></i>
+            <h5 class="card-title">Trabajo en Equipo</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Puntualidad -->
+      <div class="col-6 col-md-3">
+        <div class="card valor-card h-100 text-center border-0">
+          <div class="card-body d-flex flex-column align-items-center">
+            <i class="bi bi-clock mb-3"></i>
+            <h5 class="card-title">Puntualidad</h5>
+          </div>
+        </div>
+      </div>
+      <!-- Seguridad -->
+      <div class="col-6 col-md-3">
+        <div class="card valor-card h-100 text-center border-0">
+          <div class="card-body d-flex flex-column align-items-center">
+            <i class="bi bi-shield-lock mb-3"></i>
+            <h5 class="card-title">Seguridad</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
       <!-- HISTORIA -->
-      <section class="bg-light py-5">
+      <section class="bg-light py-1">
         <div class="container">
           <h2 class="text-center mb-4">Nuestra Historia</h2>
           <div class="timeline">
@@ -192,6 +241,7 @@
         </div>
       </section>
     </main>
+       <!-- FOOTER-->
     <footer>
       <h4><b>Seguinos en Redes Sociales</b></h4>
       <a
@@ -214,14 +264,15 @@
         ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <path
             d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"
-          /></svg></a>
+          /></svg>
+        </a>
       <p>Derechos reservados &copy; IDW S.A 2025</p>
     </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
     <script src="js/main.js"></script>
   </body>
 </html>
