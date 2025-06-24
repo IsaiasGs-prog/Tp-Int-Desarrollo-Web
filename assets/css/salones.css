@@ -364,25 +364,25 @@ footer a svg:hover {
     font-size: 1rem;
 }
 
-/* Centrar el formulario: */
+
 .form-centrado {
-  max-width: 900px;    /* o el ancho que prefieras */
+  max-width: 900px;    
   width: 100%;
-  margin: 0 auto;      /* centra horizontalmente */
-  padding: 1.5rem;     /* opcional: algo de padding interno */
-  background: #f8f9fa; /* opcional: color de fondo claro */
-  border-radius: 4px;  /* opcional: bordes redondeados */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* opcional: sombra suave */
+  margin: 0 auto;     
+  padding: 1.5rem;     
+  background: #f8f9fa; 
+  border-radius: 4px;  
+  box-shadow: 0 0 10px rgba(0,0,0,0.1); 
 }
 
 .reservas-section h3,
 .reservas-section p {
-  text-align: center;   /* centra los títulos y el párrafo */
+  text-align: center;   
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Si quieres que cada label e input estén en bloque y no pegados: */
+
 .reservas label {
   display: block;
   margin-top: 1rem;

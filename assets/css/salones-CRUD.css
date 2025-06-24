@@ -300,7 +300,7 @@ body {
         }
         /* Botón Ver */
        .btn-ver {
-            background-color: #0c7805;  /* morado */
+            background-color: #0c7805; 
             color: white;
             border: none;
             padding: 8px 12px;
@@ -314,7 +314,7 @@ body {
 
         /* Botón Editar */
        .btn-editar {
-            background-color: #164dce;  /* verde */
+            background-color: #164dce;  
             color: white;
             border: none;
             padding: 8px 12px;
@@ -328,7 +328,7 @@ body {
 
        /* Botón Eliminar */
        .btn-eliminar {
-            background-color: #dc3545;  /* rojo */
+            background-color: #dc3545;  
             color: white;
             border: none;
             padding: 8px 12px;
@@ -421,3 +421,7 @@ body {
         .view-toggle button.active {
             background-color: #4d2973;
         }
+        
+    .hidden-admin {
+    display: none !important; 
+}
