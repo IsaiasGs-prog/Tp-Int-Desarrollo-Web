@@ -240,8 +240,8 @@
         const salones = JSON.parse(localStorage.getItem('salones_eventos')) || [];
 
         
-         contenedor.innerHTML = '';
-         if (salones.length === 0) {
+        contenedor.innerHTML = '';
+        if (salones.length === 0) {
             contenedor.innerHTML = '<p>No hay salones disponibles en este momento.</p>';
           } else {
             salones.forEach(salon => {
@@ -256,14 +256,14 @@
                 </article>
               `;
           contenedor.appendChild(card);
-           }
-         });
+          }
+        });
         }
 
         
-         select.innerHTML = '<option value="">Seleccione un salón</option>';
-         salones.forEach(salon => {
-           if (salon.disponible) {
+        select.innerHTML = '<option value="">Seleccione un salón</option>';
+        salones.forEach(salon => {
+          if (salon.disponible) {
               const option = document.createElement('option');
               option.value = salon.id;
               option.textContent = salon.nombre;
@@ -288,7 +288,7 @@
           }
 
           
-          salones.filter(salon => salon.disponible).slice(0, 3).forEach((salon) => {
+          salones.filter(salon => salon.disponible).slice(0, 4).forEach((salon) => {
             const col = document.createElement('div');
             col.classList.add('col');
             col.innerHTML = `
