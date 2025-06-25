@@ -14,7 +14,9 @@ body {
 body.sidebar-open {
     overflow: hidden; 
 }
+
 /* Estilos de la barra de navegación */
+
 nav {
     background-color: #663399;
     overflow: hidden;
@@ -385,34 +387,32 @@ footer a svg:hover {
 
    /* --- Estilos Informacion Institucional --- */
 
-    .hero-institucional {
-      position: relative;
-      height: 50vh;
-      background: url('/Tp-Int-Desarrollo-Web/img/salones/SalonInfantilModerno.jpg') center/cover no-repeat;
-      color: #fff;
-    }
-    .hero-institucional .overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-    }
-    .hero-institucional .content {
-      position: relative;
-      z-index: 1;
-    }
+.hero-institucional {
+    position: relative;
+    height: 50vh;
+    background: url('/Tp-Int-Desarrollo-Web/img/salones/SalonInfantilModerno.jpg') center/cover no-repeat;
+    color: #fff;
+}
+.hero-institucional .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+.hero-institucional .content {
+    position: relative;
+    z-index: 1;
+}
     
-    .text-justify {
+.text-justify {
   text-align: justify;
   text-justify: inter-word;
 }
 
    
-/* sección con fondo violeta */
 .mission-vision-section {
   background-color: #663399;
 }
 
-/* tarjetas siempre blancas */
 .mission-vision-section .card {
   background-color: #fff;
 }
@@ -422,12 +422,11 @@ footer a svg:hover {
       background: #f8f9fa;
 }
 
-/* fondos y espaciado generales */
 .valores-section {
   background-color: #f4f4f9;
 }
 
-/* card de cada valor */
+
 .valor-card {
   background-color:#663399;
   border-radius: 0.75rem;
@@ -435,13 +434,12 @@ footer a svg:hover {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* iconos grandes y con color corporativo */
 .valor-card .bi {
   font-size: 2.5rem;
   color: #663399;
 }
 
-/* título más destacado */
+
 .valor-card .card-title {
   margin-top: 0.5rem;
   font-weight: 600;
@@ -449,41 +447,49 @@ footer a svg:hover {
   ;
 }
 
-/* efecto al pasar el ratón */
+
 .valor-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 
-    .timeline {
-      position: relative;
-      padding-left: 1rem;
-      margin-top: 1rem;
-    }
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 1rem; top: 0; bottom: 0;
-      width: 4px;
-      background: #663399;
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 2rem;
-    }
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -0.3rem;
-      top: 0;
-      width: 0.8rem; height: 0.8rem;
-      background: #663399;
-      border-radius: 50%;
-    }
-    .team-card img {
-      object-fit: cover;
-      height: 200px;
-    }
+.timeline {
+    position: relative;
+    padding-left: 1rem;
+    margin-top: 1rem;
+}
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem; top: 0; bottom: 0;
+    width: 4px;
+    background: #663399;
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.3rem;
+    top: 0;
+    width: 0.8rem; height: 0.8rem;
+    background: #663399;
+    border-radius: 50%;
+}
+.team-card img {
+    object-fit: cover;
+    height: 200px;
+}
 
+/* --- Estilos USUARIOS --- */
+
+ #tablaUsuarios td {
+  text-align: justify;      
+  text-justify: inter-word; 
+  word-break: break-word;   
+  padding-left: 30px;
+}
  
