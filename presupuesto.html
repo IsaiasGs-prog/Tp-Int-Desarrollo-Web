@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Panel Admin – Usuarios</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-  </head>
+    <title>IDW S.A - Generar Presupuesto</title>
+    <link rel="stylesheet" href="assets/css/styles.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/presupuesto.css" type="text/css" />
+    </head>
   <body>
-    <!-- NAV BAR-->
     <header>
+      <header>
+      <!-- NAV BAR-->
       <nav
         class="navbar navbar-purple py-0 shadow-wide d-flex align-items-center"
       >
@@ -39,8 +42,8 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white px-3" href="./institucional.html"
-                >Información institucional</a
+              <a class="nav-link text-white px-3" href="./presupuesto.html"
+                >Presupuesto</a
               >
             </li>
             <li class="nav-item">
@@ -111,25 +114,81 @@
           </li>
         </ul>
       </div>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
     </header>
-    <!-- MAIN-->
-    <main class="container my-4">
-      <h1>Usuarios Registrados</h1>
-      <table class="table table-striped" id="tablaUsuarios">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Usuario</th>
-            <th>Nombre Completo</th>
-            <th>Email</th>
-          </tr>
-        </thead>
-        <tbody>
-        </tbody>
-      </table>
+
+    <main class="container">
+    <h1>Genera tu Presupuesto Personalizado</h1>
+
+    <div id="mensajeFeedback" class="mensaje" role="alert"></div>
+
+    <form id="presupuestoForm">
+        <div class="form-group">
+        <label for="nombreCliente">Nombre:</label>
+        <input
+            type="text"
+            id="nombreCliente"
+            class="form-control"
+            required
+        />
+        </div>
+        <div class="form-group">
+        <label for="apellidoCliente">Apellido:</label>
+        <input
+            type="text"
+            id="apellidoCliente"
+            class="form-control"
+            required
+        />
+        </div>
+        <div class="form-group">
+        <label for="fechaEvento">Fecha del Evento:</label>
+        <input type="date" id="fechaEvento" class="form-control" required />
+        </div>
+        <div class="form-group">
+        <label for="tematica">Temática del Evento:</label>
+        <input type="text" id="tematica" class="form-control" required />
+        </div>
+
+        <div class="form-group">
+        <label for="selectSalon">Selecciona un Salón:</label>
+        <select id="selectSalon" class="form-control" required>
+            <option value="">-- Selecciona un salón --</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+        <label>Servicios Adicionales:</label>
+        <div id="serviciosCheckboxContainer" class="checkbox-group">
+            <p>Cargando servicios...</p>
+        </div>
+        </div>
+
+        <div class="total-display">
+        <p>Valor Total Estimado: <span id="valorTotalEstimado">$0</span></p>
+        </div>
+
+        <button type="submit" class="btn-generate-budget">
+        Generar Presupuesto
+        </button>
+    </form>
+
+    <div id="presupuestoResultado" class="mt-5">
+        <h3>Detalle de tu Presupuesto</h3>
+        <p><strong>Cliente:</strong> <span id="resultadoNombre"></span> <span id="resultadoApellido"></span></p>
+        <p><strong>Fecha del Evento:</strong> <span id="resultadoFecha"></span></p>
+        <p><strong>Temática:</strong> <span id="resultadoTematica"></span></p>
+        <p><strong>Salón Seleccionado:</strong> <span id="resultadoSalon"></span></p>
+        <p><strong>Servicios Incluidos:</strong></p>
+        <ul id="resultadoServicios">
+        </ul>
+        <p class="total-final">Total Final: <span id="resultadoValorTotal"></span></p>
+        <button type="button" class="btn btn-secondary-custom" onclick="window.print()">Imprimir Presupuesto</button>
+        <button type="button" class="btn btn-primary-custom" onclick="location.reload()">Nuevo Presupuesto</button>
+    </div>
     </main>
-    <!-- FOOTER-->
-   <footer>
+
+<footer>
       <h4><b>Seguinos en Redes Sociales</b></h4>
       <a
         href="https://www.instagram.com/fcad.uner?igsh=OGF2YXBuNDVjajlp"
@@ -156,10 +215,11 @@
       <p>Derechos reservados &copy; IDW S.A 2025</p>
     </footer>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-      crossorigin="anonymous"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+    crossorigin="anonymous"
     ></script>
-    <script src="js/usuarios.js"></script>
+    <script src="js/presupuesto.js"></script>
     <script src="js/main.js"></script>
-  </body>
+    </body>
 </html>

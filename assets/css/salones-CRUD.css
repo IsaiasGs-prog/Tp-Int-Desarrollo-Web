@@ -299,7 +299,7 @@ body {
             text-align: center;
         }
         
-       .btn-ver {
+       .btn-versalon {
             background-color: #0c7805; 
             color: white;
             border: none;
@@ -308,12 +308,12 @@ body {
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-       .btn-ver:hover {
+       .btn-versalon:hover {
             background-color: #92eb94;
         }
 
         
-       .btn-editar {
+       .btn-editarsalon {
             background-color: #164dce;  
             color: white;
             border: none;
@@ -322,12 +322,12 @@ body {
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-      .btn-editar:hover {
+      .btn-editarsalon:hover {
             background-color: #0b6a7f;
         }
 
 
-       .btn-eliminar {
+       .btn-eliminarsalon {
             background-color: #dc3545;  
             color: white;
             border: none;
@@ -336,7 +336,7 @@ body {
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-       .btn-eliminar:hover {
+       .btn-eliminarsalon:hover {
             background-color: #bd2130;
         }
 
@@ -424,4 +424,73 @@ body {
         
     .hidden-admin {
     display: none !important; 
+}
+
+/* Gestión de Servicios */
+
+.servicios-gestion {
+    margin-top: 40px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12);
+    border: 1px solid #ddd;
+}
+
+.servicios-gestion h2 {
+    margin-bottom: 20px;
+    color: #663399;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.servicios-gestion form {
+    margin-bottom: 20px;
+}
+
+.servicios-gestion input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.servicios-gestion .submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.servicios-gestion .btn-editarservicio,
+.servicios-gestion .btn-eliminarservicio {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+    margin: 0 2px;
+}
+
+.servicios-gestion .btn-editarservicio {
+    background-color: #007bff;
+}
+
+.servicios-gestion .btn-editarservicio:hover {
+    background-color: #0056b3;
+}
+
+.servicios-gestion .btn-eliminarservicio {
+    background-color: #dc3545;
+}
+
+.servicios-gestion .btn-eliminarservicio:hover {
+    background-color: #b52a37;
+}
+.card-servicio {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 15px;
 }
