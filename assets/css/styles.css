@@ -391,7 +391,7 @@ footer a svg:hover {
 .hero-institucional {
     position: relative;
     height: 50vh;
-    background: url('/Tp-Int-Desarrollo-Web/img/salones/SalonInfantilModerno.jpg') center/cover no-repeat;
+    background: url('../../img/salones/SalonInfantilModerno.jpg') center/cover no-repeat;
     color: #fff;
 }
 .hero-institucional .overlay {
