@@ -171,7 +171,7 @@ class ServicioManager {
   }
 
   mostrarMensaje(texto, tipo) {
-    alert(texto); // Podés cambiar esto por un mensaje más estético si querés
+    alert(texto); 
   }
 }
 
