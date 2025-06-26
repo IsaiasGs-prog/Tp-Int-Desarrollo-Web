@@ -250,8 +250,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 a.onclick = null;
             }
         });
-    }
+        //Reubicar "Presupuesto" después de "Usuarios" si está logueado
+            if (accessToken) {
+                // Navbar
+                const presupuestoNav = document.querySelector('a[href="./presupuesto.html"]')?.parentElement;
+                const usersNav = document.getElementById('usersNavLink');
+                if (presupuestoNav && usersNav) {
+                  usersNav.parentElement.insertBefore(presupuestoNav, usersNav.nextSibling);
+                }
 
+                // Sidebar
+                const presupuestoSidebar = document.querySelector('#sidebarMenu a[href="./presupuesto.html"]')?.parentElement;
+                const usersSidebar = document.getElementById('usersNavLinkSidebar');
+                if (presupuestoSidebar && usersSidebar) {
+                  usersSidebar.parentElement.insertBefore(presupuestoSidebar, usersSidebar.nextSibling);
+                }
+            }
+    }
     updateNavLinks();
 
     if (window.location.pathname.includes('salones-crud.html')) {
